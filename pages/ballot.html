@@ -1,0 +1,550 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Ballot</title>
+    <!-- materialize icons, css & js -->
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
+    <meta name="theme-color" content="#FFE1C4" />
+  </head>
+  <body class="grey lighten-4">
+    <!-- top nav -->
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="/"><span>Personal Ballot</span></a>
+
+        <span class="right grey-text text-darken-1">
+          <i class="material-icons sidenav-trigger" data-target="side-menu"
+            >menu</i
+          >
+        </span>
+      </div>
+    </nav>
+
+    <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">Personal Ballot</a></li>
+      <li><a href="/index.html" class="waves-effect">Home</a></li>
+      <li><a href="/pages/ballot.html" class="waves-effect">Vote</a></li>
+      <li>
+        <a href="/pages/ballotSummary.html" class="waves-effect">My Ballot</a>
+      </li>
+      <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="/pages/contact.html" class="waves-effect">
+          <i class="material-icons">mail_outline</i>Contact</a
+        >
+      </li>
+    </ul>
+    <!--Storing Ballot Results in Local Storage   CONTINUE HERE-->
+    <!-- <script>
+      function getPresident() {
+        var presidentRadio = document.getElementsByName("president");
+        var presidentValue;
+        for (var i = 0; i < pe.length; i++) {
+          if (presidentRadio[i].checked) {
+            presidentValue = presidentRadio[i].value;
+          }
+        }
+        return presidentValue;
+      }
+    </script>
+
+    <script>
+      function setPresident() {
+        localStorage.setItem("president", getPresident());
+      }
+    </script>
+
+    <script>
+      var presRadios = document.getElementsByName("president");
+      var val = localStorage.getItem("president");
+      for (var i = 0; i < presRadios.length; i++) {
+        if (presRadios[i].value == val) {
+          presRadios[i].checked = true;
+        }
+      }
+
+      $('input[name="president"]').on("change", function () {
+        localStorage.setItem("seconds", $(this).val());
+      });
+    </script> -->
+
+    <script src="/js/ballot.js"></script>
+
+    <!--Ballot-->
+    <div>
+      <div>
+        <form id="completeBallot" action="#">
+          <div class="banner">
+            <h1>Ballot</h1>
+          </div>
+          <div class="group">
+            <label>Candidates for President</label>
+          </div>
+          <div class="question">
+            <figure>
+              <a target="_blank" href="https://joebiden.com/joes-vision/">
+                <img
+                  alt="W3Schools"
+                  src="/img/PresCand1.jpg"
+                  width="130"
+                  height="100"
+                />
+                <figcaption>Joe Biden (D)</figcaption>
+              </a>
+            </figure>
+            <figure>
+              <a target="_blank" href="https://www.promiseskept.com/#">
+                <img
+                  alt="W3Schools"
+                  src="/img/PresCand2.jpg"
+                  width="130"
+                  height="100"
+                />
+                <figcaption>Donald Trump (R)</figcaption>
+              </a>
+            </figure>
+            <div class="question-answer">
+              <div>
+                <input
+                  value="Joe Biden"
+                  name="president"
+                  type="radio"
+                  id="biden"
+                />
+                <label for="biden" class="radio"><span>Biden</span></label>
+              </div>
+              <div>
+                <input
+                  value="Donald Trump"
+                  name="president"
+                  type="radio"
+                  id="trump"
+                />
+                <label for="trump" class="radio"><span>Trump</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label>Candidates for Senate</label>
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <figure>
+                <a
+                  target="_blank"
+                  href="https://www.sasse.senate.gov/public/index.cfm/issues"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/sasse.jpg"
+                    width="130"
+                    height="100"
+                  />
+                  <figcaption>Ben Sasse (R)</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a
+                  target="_blank"
+                  href="http://www.janicekforsenate2020.com/issues.html"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/innis.jpg"
+                    width="130"
+                    height="100"
+                  />
+                  <figcaption>Chris Janicek (D)</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a target="_blank" href="https://ballotpedia.org/Gene_Siadek">
+                  <img
+                    border="0"
+                    alt="W3Schools"
+                    src="/img/siadek.jpg"
+                    width="130"
+                    height="100"
+                  />
+                  <figcaption>Gene Siadek (L)</figcaption>
+                </a>
+              </figure>
+
+              <div class="question-answer">
+                <div>
+                  <input
+                    value="Ben Sasse"
+                    name="senate"
+                    type="radio"
+                    id="sasse"
+                  />
+                  <label for="sasse" class="radio"><span>Sasse</span></label>
+                </div>
+                <div>
+                  <input
+                    value="Chris Janicek"
+                    name="senate"
+                    type="radio"
+                    id="janicek"
+                  />
+                  <label for="janicek" class="radio"
+                    ><span>Janicek</span></label
+                  >
+                </div>
+                <div>
+                  <input
+                    value="Gene Siadek"
+                    name="senate"
+                    type="radio"
+                    id="siadek"
+                  />
+                  <label for="siadek" class="radio"><span>Siadek</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label>Candidates for House</label>
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <figure>
+                <a
+                  target="_blank"
+                  href="https://www.supportfort.com/where-i-stand"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/jeff.jpg"
+                    width="110"
+                    height="120"
+                  />
+                  <figcaption>Jeff Fortenberry (R)</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a target="_blank" href="https://katebolz.com">
+                  <img
+                    alt="W3Schools"
+                    src="/img/bolz.jpg"
+                    width="130"
+                    height="100"
+                  />
+                  <figcaption>Kate Bolz(D)</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a target="_blank" href="https://ballotpedia.org/Dennis_Grace">
+                  <img
+                    alt="W3Schools"
+                    src="/img/grace.jpg"
+                    width="100"
+                    height="100"
+                  />
+                  <figcaption>Dennis Grace (L)</figcaption>
+                </a>
+              </figure>
+
+              <div class="question-answer">
+                <div>
+                  <input
+                    value="Jeff Fortenberry"
+                    name="house"
+                    type="radio"
+                    id="fortenberry"
+                  />
+                  <label for="fortenberry" class="radio"
+                    ><span>Fortenberry</span></label
+                  >
+                </div>
+                <input value="Kate Bolz" name="house" type="radio" id="bolz" />
+                <label for="bolz" class="radio"><span>Bolz</span></label>
+              </div>
+              <div>
+                <input
+                  value="Dennis Grace"
+                  name="house"
+                  type="radio"
+                  id="grace"
+                />
+                <label for="grace" class="radio"><span>Grace</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <label>Candidates for Legislature District 21 (Nonpartisan)</label>
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <figure>
+                <a target="_blank" href="https://ballotpedia.org/Joseph_Couch">
+                  <img
+                    alt="W3Schools"
+                    src="/img/couch.jpg"
+                    width="130"
+                    height="90"
+                  />
+                  <figcaption>Joseph Couch</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a
+                  target="_blank"
+                  href="https://www.mikehilgers.com/on-the-issues"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/hilgers.jpg"
+                    width="90"
+                    height="100"
+                  />
+                  <figcaption>Mike Hilgers</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a target="_blank" href="https://brodeyweber.com/priorities">
+                  <img
+                    border="0"
+                    alt="W3Schools"
+                    src="/img/weber.jpg"
+                    width="120"
+                    height="100"
+                  />
+                  <figcaption>Brody Weber</figcaption>
+                </a>
+              </figure>
+
+              <div class="question-answer">
+                <div>
+                  <input
+                    value="Joseph Couch "
+                    name="legislature"
+                    type="radio"
+                    id="couch"
+                  />
+                  <label for="couch" class="radio"><span>Couch</span></label>
+                </div>
+                <div>
+                  <input
+                    value="Mike Hilgers"
+                    name="legislature"
+                    type="radio"
+                    id="hilgers"
+                  />
+                  <label for="hilgers" class="radio"
+                    ><span>Hilgers</span></label
+                  >
+                </div>
+                <div>
+                  <input
+                    value="Brody Weber"
+                    name="legislature"
+                    type="radio"
+                    id="weber"
+                  />
+                  <label for="weber" class="radio"><span>Weber</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label
+              >Candidates for Freeman Public Schools District Board of
+              Education</label
+            >
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <figure>
+                <a
+                  href="https://voicenewsnebraska.com/2020/04/30/voters-to-choose-from-field-of-8-candidates-for-freeman-board-of-education/"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/hams.png"
+                    width="100"
+                    height="100"
+                  />
+                  <figcaption>Chad Hams</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a
+                  href="https://voicenewsnebraska.com/2020/04/30/voters-to-choose-from-field-of-8-candidates-for-freeman-board-of-education/"
+                >
+                  <img
+                    alt="W3Schools"
+                    src="/img/schaaf.png"
+                    width="100"
+                    height="100"
+                  />
+                  <figcaption>Chelsea Schaaf</figcaption>
+                </a>
+              </figure>
+              <figure>
+                <a
+                  href="https://voicenewsnebraska.com/2020/04/30/voters-to-choose-from-field-of-8-candidates-for-freeman-board-of-education/"
+                >
+                  <img
+                    border="0"
+                    alt="W3Schools"
+                    src="/img/meints.png"
+                    width="100"
+                    height="100"
+                  />
+                  <figcaption>Anthony Meints</figcaption>
+                </a>
+              </figure>
+
+              <div class="question-answer">
+                <div>
+                  <input
+                    value="Chad Hams"
+                    name="education"
+                    type="radio"
+                    id="hams"
+                  />
+                  <label for="hams" class="radio"><span>Hams</span></label>
+                </div>
+                <div>
+                  <input
+                    value="Chelsea Schaaf"
+                    name="education"
+                    type="radio"
+                    id="schaaf"
+                  />
+                  <label for="schaaf" class="radio"><span>Schaaf</span></label>
+                </div>
+                <div>
+                  <input
+                    value="Anthony Mients"
+                    name="education"
+                    type="radio"
+                    id="meints"
+                  />
+                  <label for="meints" class="radio"><span>Mients</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label
+              >PROPOSED CITY OF LINCOLN CHARTER AMENDMENT-ARTICLE IX, SECTION
+              27</label
+            >
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <label
+                >Shall Article IX, Section 27 of the Charter of the City of
+                Lincoln be amended to correct typographical errors and make
+                mayoral reference gender neutral?</label
+              >
+
+              <div class="question-answer" class="form">
+                <div>
+                  <input value="Yes" name="section27" type="radio" id="yes27" />
+                  <label for="yes27" class="radio"><span>Yes</span></label>
+                </div>
+                <div>
+                  <input value="No" name="section27" type="radio" id="no27" />
+                  <label for="no27" class="radio"><span>No</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label
+              >Waverly Proposal to Increase Local Sales and Use Tax Rate</label
+            >
+          </div>
+          <div style="clear: both;">
+            <div class="question">
+              <label
+                >Shall the governing body of the incorporated municipality - the
+                City of Waverly, Nebraska - increase the local sales and use tax
+                rate by an additional one-half of one percent (½%) from the
+                current rate of one percent (1%) to a rate of one and one-half
+                percent (1½%) and impose a sales and use tax at the increased
+                rate for a period of sixteen (16) years upon the same
+                transactions within such municipality on which the State of
+                Nebraska is authorized to impose a tax?</label
+              >
+
+              <div class="question-answer">
+                <div>
+                  <input value="Yes" name="tax" type="radio" id="yesTax" />
+                  <label for="yesTax" class="radio"><span>Yes</span></label>
+                </div>
+                <div>
+                  <input value="Yes" name="tax" type="radio" id="noTax" />
+                  <label for="noTax" class="radio"><span>No</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="btn-block">
+          <button type="submit">
+            Finish
+          </button>
+          <h1>Result</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+    type="submit"
+            form="completeBallot"
+            onclick="!this.form&&$('#'+$(this).attr('form')).submit()"
+            style="margin-bottom: 10px;" -->
+
+    <!-- 
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script> -->
+    <!-- <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDuDGcpHGU-Sx1Hla3wYwZvXbjeKpHqPjA",
+        authDomain: "net-ninja-pwa.firebaseapp.com",
+        databaseURL: "https://net-ninja-pwa.firebaseio.com",
+        projectId: "net-ninja-pwa",
+        storageBucket: "net-ninja-pwa.appspot.com",
+        messagingSenderId: "1008745109838",
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script> -->
+
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/ui.js"></script>
+  </body>
+</html>

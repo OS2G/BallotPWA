@@ -1,0 +1,135 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Personal Ballot</title>
+      <!-- materialize icons, css & js -->
+      <link type="text/css" href="/css/materialize.min.css" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+      <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous"
+      />
+      <script type="text/javascript" src="/js/materialize.min.js"></script>
+      <script type="text/javascript" src="/js/materialize.js"></script>
+      
+      <link rel="manifest" href="/manifest.json" />
+
+  
+      <!-- ios support -->
+      <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png" />
+      <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
+      <meta name="theme-color" content="#FFE1C4" />
+
+      <script>
+        window.onload = function(){
+            
+             var president = document.getElementById("completeBallot").value;
+             document.getElementById("president").innerHTML = president;
+
+             var senate = document.getElementById("completeBallot").value;
+             document.getElementById("senate").innerHTML = senate;
+
+             var house = document.getElementById("completeBallot").value;
+             document.getElementById("house").innerHTML = house;
+
+             var legislature = document.getElementById("completeBallot").value;
+             document.getElementById("legislature").innerHTML = legislature;
+
+             var education = document.getElementById("completeBallot").value;
+             document.getElementById("eduction").innerHTML = education;
+
+             var section27 = document.getElementById("completeBallot").value;
+             document.getElementById("section27").innerHTML = section27;
+
+             var taxRate = document.getElementById("completeBallot").value;
+             document.getElementById("taxRate").innerHTML = taxRate;
+        };
+        </script>
+
+
+    </head>
+    <body class="grey lighten-4">
+      <!-- top nav -->
+      <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+          <a href="/"><span>Personal Ballot</span></a>
+          <span class="right grey-text text-darken-1">
+            <i class="material-icons sidenav-trigger" data-target="side-menu"
+            >menu</i
+          > </span>
+        </div>
+      </nav>
+  
+       <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+        <li><a class="subheader">Personal Ballot</a></li>
+        <li><a href="/index.html" class="waves-effect">Home</a></li>
+        <li><a href="/pages/ballot.html" class="waves-effect">Vote</a></li>
+        <li>
+          <a href="/pages/ballotSummary.html" class="waves-effect">My Ballot</a>
+        </li>
+        <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+        <li><div class="divider"></div></li>
+        <li>
+          <a href="/pages/contact.html" class="waves-effect">
+            <i class="material-icons">mail_outline</i>Contact</a
+          >
+        </li>
+      </ul>
+  
+      <!--Ballot summary-->
+      <div>
+        
+        
+        <button onclick="getBallot()">Try it</button>
+        
+        <label for="w3review">Review of W3Schools:</label>
+
+        
+        <p id="demo"></p> 
+        
+        <input type="radio" name="president" value="1" checked >Red color
+
+      <p>
+        <var>xjhglsf</var>
+      </p>        
+        
+      <script>
+        document.getElementById('president').value = localStorage.getItem("president");
+        var presidentRadios = document.getElementById("president"); // list of radio buttons
+        var val = localStorage.getItem('president'); // local storage value
+        for(var i=0;i<radios.length;i++){
+        if(radios[i].value == val){
+          radios[i].checked = true; // marking the required radio as checked
+          }
+        }
+        $('input[name="president"]').on('change', function(){
+          localStorage.setItem('president', $(this).val());
+          });
+      
+        var x = document.querySelector('input[name="president"]:checked').value;
+      
+      </script>
+      </div>
+      
+  
+      </div>
+      <script src="/js/app.js"></script>
+      <script src="/js/db.js"></script>
+      <script src="/js/ui.js"></script>
+    </body>
+  </html>
+  
