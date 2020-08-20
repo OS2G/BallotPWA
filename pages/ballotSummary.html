@@ -35,27 +35,13 @@
 
       <script>
         window.onload = function(){
-            
-             var president = document.getElementById("completeBallot").value;
-             document.getElementById("president").innerHTML = president;
-
-             var senate = document.getElementById("completeBallot").value;
-             document.getElementById("senate").innerHTML = senate;
-
-             var house = document.getElementById("completeBallot").value;
-             document.getElementById("house").innerHTML = house;
-
-             var legislature = document.getElementById("completeBallot").value;
-             document.getElementById("legislature").innerHTML = legislature;
-
-             var education = document.getElementById("completeBallot").value;
-             document.getElementById("eduction").innerHTML = education;
-
-             var section27 = document.getElementById("completeBallot").value;
-             document.getElementById("section27").innerHTML = section27;
-
-             var taxRate = document.getElementById("completeBallot").value;
-             document.getElementById("taxRate").innerHTML = taxRate;
+          document.getElementById("presidentResult").innerHTML = localStorage.getItem("president");
+          document.getElementById("senateResult").innerHTML = localStorage.getItem("senate");  
+          document.getElementById("houseResult").innerHTML = localStorage.getItem("house");
+          document.getElementById("legislatureResult").innerHTML = localStorage.getItem("legislature");
+          document.getElementById("educationResult").innerHTML = localStorage.getItem("education");
+          document.getElementById("section27Result").innerHTML = localStorage.getItem("section27");
+          document.getElementById("taxResult").innerHTML = localStorage.getItem("tax");
         };
         </script>
 
@@ -92,38 +78,59 @@
   
       <!--Ballot summary-->
       <div>
-        
-        
-        <button onclick="getBallot()">Try it</button>
-        
-        <label for="w3review">Review of W3Schools:</label>
+        <div>
+          <form id="completeBallot" action="#">
+            <div class="banner">
+              <h1>Ballot</h1>
+            </div>
+           
+            <div class="input-field col s12">
+              <h6>My President Choice</h6>
+              <textarea id="presidentResult" class="materialize-textarea"></textarea> 
+            </div>
 
-        
-        <p id="demo"></p> 
-        
-        <input type="radio" name="president" value="1" checked >Red color
+            <div class="input-field col s12">
+              <h6>My Senate Choice</h6>
+              <textarea id="senateResult" class="materialize-textarea"></textarea> 
+            </div>
 
-      <p>
-        <var>xjhglsf</var>
-      </p>        
-        
-      <script>
-        document.getElementById('president').value = localStorage.getItem("president");
-        var presidentRadios = document.getElementById("president"); // list of radio buttons
-        var val = localStorage.getItem('president'); // local storage value
-        for(var i=0;i<radios.length;i++){
-        if(radios[i].value == val){
-          radios[i].checked = true; // marking the required radio as checked
-          }
-        }
-        $('input[name="president"]').on('change', function(){
-          localStorage.setItem('president', $(this).val());
-          });
-      
-        var x = document.querySelector('input[name="president"]:checked').value;
-      
-      </script>
+            <div class="input-field col s12">
+              <h6>My House of Representative Choice</h6>
+              <textarea id="houseResult" class="materialize-textarea"></textarea> 
+            </div>
+
+            <div class="input-field col s12">
+              <h6>My Legislature Choice</h6>
+              <textarea id="legislatureResult" class="materialize-textarea"></textarea> 
+            </div>
+
+            <div class="input-field col s12">
+              <h6>My Freeman Public Schools District Board of
+                Education Choice</h6>
+              <textarea id="educationResult" class="materialize-textarea"></textarea> 
+            </div>
+
+            <div class="input-field col s12">
+              <h6>Shall Article IX, Section 27 of the Charter of the City of Lincoln be amended to correct typographical errors and make mayoral reference gender neutral?</h6>
+              <textarea id="section27Result" class="materialize-textarea"></textarea> 
+            </div>
+
+            <div class="input-field col s12">
+              <h6>Shall the governing body of the incorporated municipality - the
+                City of Waverly, Nebraska - increase the local sales and use tax
+                rate by an additional one-half of one percent (½%) from the
+                current rate of one percent (1%) to a rate of one and one-half
+                percent (1½%) and impose a sales and use tax at the increased
+                rate for a period of sixteen (16) years upon the same
+                transactions within such municipality on which the State of
+                Nebraska is authorized to impose a tax?</h6>
+              <textarea id="taxResult" class="materialize-textarea"></textarea> 
+            </div>
+
+          </form>      
+        </div>
       </div>
+  
       
   
       </div>
