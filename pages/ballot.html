@@ -21,6 +21,8 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/css/skeleton.css"/>
+    <link rel="stylesheet" href="/css/normalize.css"/>
     <script type="text/javascript" src="/js/materialize.min.js"></script>
     <script type="text/javascript" src="/js/materialize.js"></script>
     <link rel="manifest" href="/manifest.json" />
@@ -30,7 +32,7 @@
     <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
     <meta name="theme-color" content="#FFE1C4" />
   </head>
-  <body class="grey lighten-4">
+  <body class="grey lighten-4" style="height: 100%;" style="width: 100%;"> 
     <!-- top nav -->
     <nav class="z-depth-0">
       <div class="nav-wrapper container">
@@ -60,53 +62,19 @@
         >
       </li>
     </ul>
-    <!--Storing Ballot Results in Local Storage   CONTINUE HERE-->
-    <!-- <script>
-      function getPresident() {
-        var presidentRadio = document.getElementsByName("president");
-        var presidentValue;
-        for (var i = 0; i < pe.length; i++) {
-          if (presidentRadio[i].checked) {
-            presidentValue = presidentRadio[i].value;
-          }
-        }
-        return presidentValue;
-      }
-    </script>
-
-    <script>
-      function setPresident() {
-        localStorage.setItem("president", getPresident());
-      }
-    </script>
-
-    <script>
-      var presRadios = document.getElementsByName("president");
-      var val = localStorage.getItem("president");
-      for (var i = 0; i < presRadios.length; i++) {
-        if (presRadios[i].value == val) {
-          presRadios[i].checked = true;
-        }
-      }
-
-      $('input[name="president"]').on("change", function () {
-        localStorage.setItem("seconds", $(this).val());
-      });
-    </script> -->
-
-    <script src="/js/ballot.js"></script>
-
     <!--Ballot-->
-    <div>
-      <div>
-        <form id="completeBallot" action="#">
+    
+    <div class="container" style="max-width: 100%;">
+      <div class="row">
+        <div class="twelve columns">
+          <form id="completeBallot" action="/pages/ballotSummary.html">
           <div class="banner">
             <h1>Ballot</h1>
           </div>
-          <div class="group">
+          <div class="group" class="container">
             <label>Candidates for President</label>
           </div>
-          <div class="question">
+          <div class="question" class="container">
             <figure>
               <a target="_blank" href="https://joebiden.com/joes-vision/">
                 <img
@@ -129,7 +97,7 @@
                 <figcaption>Donald Trump (R)</figcaption>
               </a>
             </figure>
-            <div class="question-answer">
+            <div class="question-answer" >
               <div>
                 <input
                   value="Joe Biden"
@@ -150,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div class="group">
+          <div class="container">
             <label>Candidates for Senate</label>
           </div>
           <div style="clear: both;">
@@ -330,7 +298,6 @@
               <figure>
                 <a target="_blank" href="https://brodeyweber.com/priorities">
                   <img
-                    border="0"
                     alt="W3Schools"
                     src="/img/weber.jpg"
                     width="120"
@@ -508,43 +475,22 @@
                 </div>
               </div>
             </div>
-          </div>
-        </form>
-        <div class="btn-block">
-          <button id="submitButton">
-            Finish
-          </button>
-          <h1 id="demo"></h1>
+            
+          </div>>
+            <div class="btn-block">
+          
+            <button id="submitButton" type="submit">
+              Finish
+            </button>
+          </form>
         </div>
       </div>
     </div>
-
-    <!-- 
-    type="submit"
-            form="completeBallot"
-            onclick="!this.form&&$('#'+$(this).attr('form')).submit()"
-            style="margin-bottom: 10px;" -->
-
-    <!-- 
-    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script> -->
-    <!-- <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDuDGcpHGU-Sx1Hla3wYwZvXbjeKpHqPjA",
-        authDomain: "net-ninja-pwa.firebaseapp.com",
-        databaseURL: "https://net-ninja-pwa.firebaseio.com",
-        projectId: "net-ninja-pwa",
-        storageBucket: "net-ninja-pwa.appspot.com",
-        messagingSenderId: "1008745109838",
-      };
-      firebase.initializeApp(config);
-      const db = firebase.firestore();
-    </script> -->
+    
+    
 
     <script src="/js/ballot.js"></script>
     <script src="/js/app.js"></script>
-    <script src="/js/db.js"></script>
     <script src="/js/ui.js"></script>
   </body>
 </html>

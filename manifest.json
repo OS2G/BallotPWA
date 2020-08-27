@@ -1,6 +1,6 @@
 {
-  "name": "Personal Ballot",
-  "short_name": "PersonalBallot",
+  "name": "Pocket Ballot",
+  "short_name": "PocketBallot",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#FFE9D2",
